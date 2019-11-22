@@ -18,7 +18,7 @@ def is_installed(name):
 #a = is_installed('git')
 #print (a)
 
-def verifyAndInstall(name)
+def verifyAndInstall(name):
     a = is_installed(name)
     if (a==False):
         if(name=="java"):
