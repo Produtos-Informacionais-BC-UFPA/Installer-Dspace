@@ -18,8 +18,9 @@ verifyAndInstall("postgres")
 
 
 os.system('useradd -m dspace')
-os.system('cd home/dspace')
+os.system('cd /home/dspace')
 os.system ('su - dspace')
+os.system('cd /home/dspace')
 gitClone_6_3()
 s = createDB_createUser()
 os.system('su')
