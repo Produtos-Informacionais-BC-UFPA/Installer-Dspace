@@ -28,7 +28,8 @@ def verifyAndInstall(name)
         if(name=="mvn"):
             mvn_install
         if(name=="postgres"):
-            psql_install()
+            b = psql_install()
+            return b
         if(name=="git"):
             install_git()
 
