@@ -14,14 +14,14 @@ verifyAndInstall("java")
 verifyAndInstall("ant")
 verifyAndInstall("mvn")
 verifyAndInstall("git")
-s = verifyAndInstall("postgres")
+verifyAndInstall("postgres")
 
 
 os.system('useradd -m dspace')
 os.system('cd home/dspace')
 
 gitClone_6_3()
-createDB_createUser()
+s = createDB_createUser()
 os.system('chmod -R 777 /DSpace') #revisar esta  etapa. Se eh este o caminho mesmo
 os.system('cd DSpace/')
 
