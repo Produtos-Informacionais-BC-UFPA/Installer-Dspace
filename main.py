@@ -19,9 +19,10 @@ verifyAndInstall("postgres")
 
 os.system('useradd -m dspace')
 os.system('cd home/dspace')
-
+os.system ('su - dspace')
 gitClone_6_3()
 s = createDB_createUser()
+os.system('su')
 os.system('chmod -R 777 /DSpace') #revisar esta  etapa. Se eh este o caminho mesmo
 os.system('cd DSpace/')
 
