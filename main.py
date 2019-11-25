@@ -5,6 +5,7 @@ from gitInstall_clone import *
 from psqlInstall import *
 from check_installed import *
 from tomcatInstall import *
+from checkUser import *
 
 os.system('apt update')
 #install_java()
@@ -16,15 +17,14 @@ verifyAndInstall("mvn")
 verifyAndInstall("git")
 verifyAndInstall("postgres")
 
-
-os.system('useradd -m dspace')
+checkUserExist()
 os.system('cd /home/dspace')
 os.system ('su - dspace')
-os.system('cd /home/dspace')
+#os.system('cd /home/dspace')
 gitClone_6_3()
 s = createDB_createUser()
 os.system('su')
-os.system('chmod -R 777 /DSpace') #revisar esta  etapa. Se eh este o caminho mesmo
+os.system('chmod -R 777 /home/dspace/DSpace') #revisar esta  etapa. Se eh este o caminho mesmo
 os.system('cd DSpace/')
 
 
