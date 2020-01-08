@@ -32,7 +32,8 @@ os.system('cd DSpace/')
 os.system("cp DSpace/dspace/config/local.cfg.EXAMPLE home/dspace/DSpace")
 os.system("mv local.cfg.EXAMPLE local.cfg")
 cmd = "sed -i 's/db.password=dspace/db.password="+s+"/'"
-cmd2 = cmd2 = " /home/ramon/Documentos/teste"
+#cmd2 = "home/ramon/Documentos/teste"
+cmd2 = "home/dspace/DSpace"
 cmd_final = cmd+cmd2
 os.system(cmd_final) #insere senha do banco no local.cfg
 

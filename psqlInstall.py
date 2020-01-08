@@ -18,7 +18,8 @@ def createDB_createUser():
     os.system('createdb --username=postgres --owner=dspace --encoding=UNICODE dspace')
     os.system('psql --username=postgres dspace -c "CREATE EXTENSION pgcrypto;"')
     print("Banco de Dados criado com Sucesso! -----------***")
-
+    
+    return pw_psql
     '''
     os.system('su - postgres')
     os.system('createuser --username=postgres --no-superuser --pwprompt dspace')
