@@ -1,5 +1,6 @@
 import os
 import pwd
+from getpass import getpass
 
 #DEPOIS RENOMEAR ESTE ARQUIVO
 
@@ -13,7 +14,8 @@ def createDB_createUser():
 
     print(" criando banco de dados ...")
     os.system('createuser --username=postgres --no-superuser --pwprompt dspace')
-    os.system('createdb --username=postgres --owner=dspace --encoding=UNICODE dspace )
+    pw_psql = getpass("Repetir senha: ")
+    os.system('createdb --username=postgres --owner=dspace --encoding=UNICODE dspace')
     os.system('psql --username=postgres dspace -c "CREATE EXTENSION pgcrypto;"')
     print("Banco de Dados criado com Sucesso! -----------***")
 
