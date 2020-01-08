@@ -3,7 +3,7 @@ from javaInstall import *
 from ant_mvnInstall import *
 from gitInstall_clone import *
 from psqlInstall import *
-from check_installed import *
+#from check_installed import *
 
 def is_installed(name):
     rc = subprocess.call(['which', name])
